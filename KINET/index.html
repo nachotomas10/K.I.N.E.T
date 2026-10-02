@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinet - Resistencia y Precisión</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #09090b;
+            background-image: radial-gradient(circle at 50% 12%, rgba(212, 175, 55, 0.15) 0%, transparent 60%);
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 15px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 340px;
+            margin-bottom: 5px;
+        }
+
+        .svg-logo {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0px 0px 15px rgba(212, 175, 55, 0.3));
+        }
+
+        .subtitulo {
+            font-size: 14px;
+            letter-spacing: 4px;
+            color: #b0b0bb;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: -5px;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+            max-width: 500px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #121216;
+            border: 2px solid #282832;
+            border-radius: 16px;
+            padding: 25px 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02) translateY(-4px);
+            border-color: #d4af37;
+            box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.9), 0px 0px 30px rgba(212, 175, 55, 0.35);
+        }
+
+        .titulo-card {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: #ffffff;
+            margin-bottom: 14px;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .subtitulo-seccion {
+            font-size: 17px;
+            color: #d4af37;
+            margin: 20px 0 12px 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .descripcion, .texto {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #b0b0bb;
+            margin-bottom: 20px;
+        }
+
+        .lista {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .lista li {
+            font-size: 14px;
+            color: #ececef;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            padding-left: 22px;
+            position: relative;
+        }
+
+        .lista li::before {
+            content: "•";
+            color: #d4af37;
+            position: absolute;
+            left: 0;
+            top: -2px;
+            font-size: 22px;
+        }
+
+        .lista li strong {
+            color: #ffffff;
+        }
+
+        .box-desarrollo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0 25px 0;
+            padding: 20px 15px;
+            border: 2px dashed #d4af37;
+            border-radius: 12px;
+            background-color: rgba(212, 175, 55, 0.05);
+            text-align: center;
+        }
+
+        .texto-oro {
+            color: #d4af37;
+            font-size: 16px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .texto-claro {
+            color: #fdf0a6;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-top: 6px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px 0;
+            text-align: center;
+            color: #d4af37;
+            background-color: transparent;
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #d4af37;
+            color: #000000;
+            box-shadow: 0px 0px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-disabled {
+            border-color: #383842;
+            color: #60606d;
+            cursor: not-allowed;
+        }
+
+        .btn-disabled:hover {
+            background-color: transparent;
+            color: #60606d;
+            box-shadow: none;
+        }
+
+        .oculto {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <svg viewBox="0 0 520 180" class="svg-logo" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad-dorado" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fdf0a6" />
+                        <stop offset="45%" stop-color="#d4af37" />
+                        <stop offset="100%" stop-color="#8a6d1b" />
+                    </linearGradient>
+                </defs>
+                <polygon points="110,12 180,52 180,128 110,168 40,128 40,52" fill="none" stroke="url(#grad-dorado)" stroke-width="6" stroke-linejoin="round"/>
+                
+                <g fill="url(#grad-dorado)">
+                    <polygon points="68,52 82,52 82,86 68,89"/>
+                    <polygon points="68,94 82,91 82,128 68,128"/>
+                    <polygon points="88,84 132,52 146,52 96,90"/>
+                    <polygon points="102,82 148,68 140,78 106,90"/>
+                    <polygon points="88,96 96,90 146,128 132,128"/>
+                    <polygon points="106,90 140,102 148,112 102,98"/>
+                </g>
+
+                <text x="215" y="112" font-family="Arial, sans-serif" font-weight="900" font-size="58" fill="url(#grad-dorado)" letter-spacing="8">KINET</text>
+            </svg>
+        </div>
+        <p class="subtitulo" id="subtitulo-header">RESISTENCIA, PRECISIÓN Y ESTILO</p>
+    </div>
+
+    <!-- PANTALLA PRINCIPAL DE INICIO -->
+    <div id="pantalla-inicio" class="contenedor">
+        
+        <div class="card">
+            <h2 class="titulo-card">KINET</h2>
+            <p class="descripcion">Diseñada para el uso diario y actividades al aire libre. Combina una estética moderna con herramientas esenciales para quienes buscan un accesorio funcional, cómodo y resistente.</p>
+            
+            <ul class="lista">
+                <li>Módulo táctico multifunción integrado en el cierre.</li>
+                <li>Sistema compacto de pedernal para encendido en emergencias.</li>
+                <li>Brújula de orientación integrada en la estructura.</li>
+            </ul>
+            
+            <button class="btn" onclick="verDetalles()">Ver detalles</button>
+        </div>
+
+        <div class="card">
+            <h2 class="titulo-card">KINET APEX</h2>
+            <p class="descripcion">Línea en desarrollo orientada a exigencias de nivel profesional. Enfoque en materiales de alta resistencia y especificaciones avanzadas.</p>
+            
+            <div class="box-desarrollo">
+                <p class="texto-oro">PROYECTO EN DESARROLLO</p>
+                <p class="texto-claro">PRÓXIMAMENTE</p>
+            </div>
+            
+            <button class="btn btn-disabled">Acceso Restringido</button>
+        </div>
+
+    </div>
+
+    <!-- PANTALLA DE DETALLE DE PRODUCTO -->
+    <div id="pantalla-detalle" class="contenedor oculto">
+        
+        <div class="card">
+            <h2 class="titulo-card">KINET - DETALLES</h2>
+            
+            <p class="texto">
+                Un producto diseñado para ofrecer practicidad y resistencia. Su estructura modular permite adaptarse a distintos tamaños manteniendo un perfil cómodo y funcional.
+            </p>
+
+            <p class="subtitulo-seccion">Materiales y Componentes</p>
+            
+            <ul class="lista">
+                <li><strong>Cuerpo principal:</strong> Fabricado en su mayoría con plástico de alta resistencia mediante impresión 3D.</li>
+                <li><strong>Tamaño regulable:</strong> Cuenta con eslabones modulares que se pueden poner y sacar para ajustar la medida.</li>
+                <li><strong>Hebilla:</strong> Incorpora una hoja fabricada en combinación de aluminio y plástico.</li>
+                <li><strong>Orientación:</strong> Brújula integrada en la estructura.</li>
+                <li><strong>Encendido:</strong> Barras de pedernal integradas para uso al aire libre.</li>
+            </ul>
+
+            <button class="btn" onclick="volverInicio()">Volver al inicio</button>
+        </div>
+
+    </div>
+
+    <script>
+        function verDetalles() {
+            document.getElementById('pantalla-inicio').classList.add('oculto');
+            document.getElementById('pantalla-detalle').classList.remove('oculto');
+            window.scrollTo(0, 0);
+        }
+
+        function volverInicio() {
+            document.getElementById('pantalla-detalle').classList.add('oculto');
+            document.getElementById('pantalla-inicio').classList.remove('oculto');
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+</html>
