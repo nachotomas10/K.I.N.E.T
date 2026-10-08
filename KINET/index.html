@@ -204,11 +204,15 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="header">
+
         <div class="logo">
+
             <svg viewBox="0 0 520 180" class="svg-logo" xmlns="http://www.w3.org/2000/svg">
+
                 <defs>
                     <linearGradient id="grad-dorado" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stop-color="#fdf0a6" />
@@ -216,8 +220,15 @@
                         <stop offset="100%" stop-color="#8a6d1b" />
                     </linearGradient>
                 </defs>
-                <polygon points="110,12 180,52 180,128 110,168 40,128 40,52" fill="none" stroke="url(#grad-dorado)" stroke-width="6" stroke-linejoin="round"/>
-                
+
+                <polygon
+                    points="110,12 180,52 180,128 110,168 40,128 40,52"
+                    fill="none"
+                    stroke="url(#grad-dorado)"
+                    stroke-width="6"
+                    stroke-linejoin="round"
+                />
+
                 <g fill="url(#grad-dorado)">
                     <polygon points="68,52 82,52 82,86 68,89"/>
                     <polygon points="68,94 82,91 82,128 68,128"/>
@@ -227,79 +238,354 @@
                     <polygon points="106,90 140,102 148,112 102,98"/>
                 </g>
 
-                <text x="215" y="112" font-family="Arial, sans-serif" font-weight="900" font-size="58" fill="url(#grad-dorado)" letter-spacing="8">KINET</text>
+                <text
+                    x="215"
+                    y="112"
+                    font-family="Arial, sans-serif"
+                    font-weight="900"
+                    font-size="58"
+                    fill="url(#grad-dorado)"
+                    letter-spacing="8"
+                >
+                    KINET
+                </text>
+
             </svg>
+
         </div>
-        <p class="subtitulo" id="subtitulo-header">RESISTENCIA, PRECISIÓN Y ESTILO</p>
+
+        <p class="subtitulo" id="subtitulo-header">
+            RESISTENCIA, PRECISIÓN Y ESTILO
+        </p>
+
     </div>
 
-    <!-- PANTALLA PRINCIPAL DE INICIO -->
+
+    <!-- PANTALLA PRINCIPAL -->
+
     <div id="pantalla-inicio" class="contenedor">
-        
-        <div class="card">
-            <h2 class="titulo-card">KINET</h2>
-            <p class="descripcion">Diseñada para el uso diario y actividades al aire libre. Combina una estética moderna con herramientas esenciales para quienes buscan un accesorio funcional, cómodo y resistente.</p>
-            
-            <ul class="lista">
-                <li>Módulo táctico multifunción integrado en el cierre.</li>
-                <li>Sistema compacto de pedernal para encendido en emergencias.</li>
-                <li>Brújula de orientación integrada en la estructura.</li>
-            </ul>
-            
-            <button class="btn" onclick="verDetalles()">Ver detalles</button>
-        </div>
 
         <div class="card">
-            <h2 class="titulo-card">KINET APEX</h2>
-            <p class="descripcion">Línea en desarrollo orientada a exigencias de nivel profesional. Enfoque en materiales de alta resistencia y especificaciones avanzadas.</p>
-            
-            <div class="box-desarrollo">
-                <p class="texto-oro">PROYECTO EN DESARROLLO</p>
-                <p class="texto-claro">PRÓXIMAMENTE</p>
-            </div>
-            
-            <button class="btn btn-disabled">Acceso Restringido</button>
-        </div>
 
-    </div>
+            <h2 class="titulo-card">
+                KINET
+            </h2>
 
-    <!-- PANTALLA DE DETALLE DE PRODUCTO -->
-    <div id="pantalla-detalle" class="contenedor oculto">
-        
-        <div class="card">
-            <h2 class="titulo-card">KINET - DETALLES</h2>
-            
-            <p class="texto">
-                Un producto diseñado para ofrecer practicidad y resistencia. Su estructura modular permite adaptarse a distintos tamaños manteniendo un perfil cómodo y funcional.
+            <p class="descripcion">
+                KINET está pensada para el uso diario y para actividades
+                al aire libre. Tiene un diseño cómodo y simple, con varias
+                herramientas útiles integradas en el mismo producto.
             </p>
 
-            <p class="subtitulo-seccion">Materiales y Componentes</p>
-            
             <ul class="lista">
-                <li><strong>Cuerpo principal:</strong> Fabricado en su mayoría con plástico de alta resistencia mediante impresión 3D.</li>
-                <li><strong>Tamaño regulable:</strong> Cuenta con eslabones modulares que se pueden poner y sacar para ajustar la medida.</li>
-                <li><strong>Hebilla:</strong> Incorpora una hoja fabricada en combinación de aluminio y plástico.</li>
-                <li><strong>Orientación:</strong> Brújula integrada en la estructura.</li>
-                <li><strong>Encendido:</strong> Barras de pedernal integradas para uso al aire libre.</li>
+
+                <li>
+                    Módulo táctico multifunción integrado en el cierre.
+                </li>
+
+                <li>
+                    Sistema compacto de pedernal para encender fuego
+                    cuando sea necesario.
+                </li>
+
+                <li>
+                    Brújula integrada para orientación.
+                </li>
+
+                <li>
+                    Eslabones que se pueden poner o sacar para ajustar
+                    el tamaño.
+                </li>
+
             </ul>
 
-            <button class="btn" onclick="volverInicio()">Volver al inicio</button>
+            <button class="btn" onclick="verDetalles()">
+                Ver detalles
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2 class="titulo-card">
+                KINET APEX
+            </h2>
+
+            <p class="descripcion">
+                La KINET APEX es la versión más resistente de KINET.
+                Está pensada para personas que le van a dar un uso más
+                intenso, por ejemplo en actividades al aire libre,
+                exploración o trabajos que se realizan todos los días.
+            </p>
+
+            <p class="descripcion">
+                Sus eslabones están hechos completamente de acero
+                inoxidable. Esto hace que sea mucho más resistente
+                que la versión normal de KINET.
+            </p>
+
+            <div class="box-desarrollo">
+
+                <p class="texto-oro">
+                    MODELO PROFESIONAL
+                </p>
+
+                <p class="texto-claro">
+                    ACERO INOXIDABLE
+                </p>
+
+            </div>
+
+            <button class="btn" onclick="verDetallesApex()">
+                Ver detalles
+            </button>
+
         </div>
 
     </div>
 
+
+    <!-- PANTALLA DE DETALLE KINET -->
+
+    <div id="pantalla-detalle" class="contenedor oculto">
+
+        <div class="card">
+
+            <h2 class="titulo-card">
+                KINET - DETALLES
+            </h2>
+
+            <p class="texto">
+                KINET está hecha para acompañarte en el día a día y
+                en actividades al aire libre. Busca ser práctica,
+                cómoda y tener varias herramientas en un solo lugar.
+            </p>
+
+            <p class="texto">
+                La versión normal utiliza plástico resistente. Esto
+                permite que sea liviana y cómoda para usar, pero no
+                está pensada para trabajos o actividades que requieran
+                un uso demasiado intenso.
+            </p>
+
+            <p class="subtitulo-seccion">
+                Materiales y Componentes
+            </p>
+
+            <ul class="lista">
+
+                <li>
+                    <strong>Cuerpo principal:</strong>
+                    Fabricado en su mayoría con plástico de alta
+                    resistencia mediante impresión 3D.
+                </li>
+
+                <li>
+                    <strong>Tamaño regulable:</strong>
+                    Los eslabones se pueden poner y sacar para
+                    ajustar el tamaño.
+                </li>
+
+                <li>
+                    <strong>Hebilla:</strong>
+                    Cuenta con una hoja hecha con una combinación
+                    de aluminio y plástico.
+                </li>
+
+                <li>
+                    <strong>Orientación:</strong>
+                    Brújula integrada en la estructura.
+                </li>
+
+                <li>
+                    <strong>Encendido:</strong>
+                    Barras de pedernal integradas para actividades
+                    al aire libre.
+                </li>
+
+            </ul>
+
+            <p class="subtitulo-seccion">
+                Para qué está pensada
+            </p>
+
+            <p class="texto">
+                KINET está pensada principalmente para el uso diario,
+                salidas, actividades recreativas y actividades al aire
+                libre que no sean demasiado exigentes.
+            </p>
+
+            <p class="texto">
+                Si se necesita algo para un uso mucho más intenso,
+                está la KINET APEX, que utiliza acero inoxidable
+                en sus eslabones.
+            </p>
+
+            <button class="btn" onclick="volverInicio()">
+                Volver al inicio
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PANTALLA DE DETALLE APEX -->
+
+    <div id="pantalla-apex" class="contenedor oculto">
+
+        <div class="card">
+
+            <h2 class="titulo-card">
+                KINET APEX - DETALLES
+            </h2>
+
+            <p class="texto">
+                La KINET APEX es la versión pensada para un uso más
+                intenso. Está dirigida a personas que pasan bastante
+                tiempo al aire libre, exploran, trabajan en lugares
+                exigentes o simplemente necesitan algo más resistente
+                para usar todos los días.
+            </p>
+
+            <p class="texto">
+                La principal diferencia está en los eslabones.
+                En la APEX están hechos completamente de acero
+                inoxidable, por lo que soportan mucho más que los
+                eslabones de plástico de la KINET normal.
+            </p>
+
+            <p class="subtitulo-seccion">
+                Materiales y Componentes
+            </p>
+
+            <ul class="lista">
+
+                <li>
+                    <strong>Eslabones:</strong>
+                    Están hechos completamente de acero inoxidable
+                    para tener una mayor resistencia.
+                </li>
+
+                <li>
+                    <strong>Tamaño regulable:</strong>
+                    Se pueden poner o sacar eslabones para ajustar
+                    el tamaño.
+                </li>
+
+                <li>
+                    <strong>Brújula:</strong>
+                    Incluye la brújula que también tiene la versión KINET.
+                </li>
+
+                <li>
+                    <strong>Pedernal:</strong>
+                    Incluye el sistema de pedernal de la versión KINET.
+                </li>
+
+                <li>
+                    <strong>Módulo multifunción:</strong>
+                    Mantiene las funciones que ya tiene la KINET normal.
+                </li>
+
+                <li>
+                    <strong>Destornillador:</strong>
+                    Incluye un destornillador de punta plana.
+                </li>
+
+                <li>
+                    <strong>Herramienta extra:</strong>
+                    La versión APEX incluye una herramienta adicional
+                    que no viene en la versión normal.
+                </li>
+
+            </ul>
+
+            <p class="subtitulo-seccion">
+                Todo lo de KINET y un poco más
+            </p>
+
+            <p class="texto">
+                La APEX tiene las mismas funciones principales que
+                la KINET, como la brújula, el pedernal y el módulo
+                multifunción. Además, agrega herramientas y cambia
+                los eslabones de plástico por acero inoxidable.
+            </p>
+
+            <p class="texto">
+                Por eso, la KINET sirve mejor para un uso normal y
+                cotidiano, mientras que la APEX está pensada para
+                cuando se necesita algo más resistente y se le va
+                a dar un uso más fuerte.
+            </p>
+
+            <div class="box-desarrollo">
+
+                <p class="texto-oro">
+                    KINET APEX
+                </p>
+
+                <p class="texto-claro">
+                    PARA UN USO MÁS INTENSO
+                </p>
+
+            </div>
+
+            <button class="btn" onclick="volverInicioApex()">
+                Volver al inicio
+            </button>
+
+        </div>
+
+    </div>
+
+
     <script>
+
         function verDetalles() {
+
             document.getElementById('pantalla-inicio').classList.add('oculto');
+
             document.getElementById('pantalla-detalle').classList.remove('oculto');
+
             window.scrollTo(0, 0);
+
         }
 
-        function volverInicio() {
-            document.getElementById('pantalla-detalle').classList.add('oculto');
-            document.getElementById('pantalla-inicio').classList.remove('oculto');
+
+        function verDetallesApex() {
+
+            document.getElementById('pantalla-inicio').classList.add('oculto');
+
+            document.getElementById('pantalla-apex').classList.remove('oculto');
+
             window.scrollTo(0, 0);
+
         }
+
+
+        function volverInicio() {
+
+            document.getElementById('pantalla-detalle').classList.add('oculto');
+
+            document.getElementById('pantalla-inicio').classList.remove('oculto');
+
+            window.scrollTo(0, 0);
+
+        }
+
+
+        function volverInicioApex() {
+
+            document.getElementById('pantalla-apex').classList.add('oculto');
+
+            document.getElementById('pantalla-inicio').classList.remove('oculto');
+
+            window.scrollTo(0, 0);
+
+        }
+
     </script>
 
 </body>
